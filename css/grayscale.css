@@ -1,0 +1,304 @@
+/*!
+ * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Dosis', sans-serif;
+    color: #fff;
+    background-color: #000;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#yellow {
+    color: #FFEB3B;
+}
+
+#black {
+    color: #000;
+}
+
+#green {
+    color: #9ccc65;
+}
+
+#green2 {
+    color: #5fa328;
+}
+
+#justify {
+    text-align: justify;
+    padding-left: 120px;
+}
+
+#title {
+    display: none;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media(min-width:768px) {
+    p {
+        margin-bottom: 30px; 
+        font-size: 18px;
+        line-height: 1.6;
+    }
+}
+
+a {
+    color: #9ccc65;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #9ccc65;
+}
+
+.light {
+    font-weight: 400;
+}
+
+.navbar-custom {
+    font-family: 'Dosis', sans-serif;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.navbar-custom a {
+    font-size: 18px;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover {
+    outline: 0;
+    color: rgba(241, 248, 233, 0.8);
+    background-color: transparent;
+}
+
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+    outline: 0;
+    background-color: transparent;
+}
+
+.navbar-custom .nav li.active {
+    outline: 0;
+}
+
+.navbar-custom .nav li.active a {
+    background-color: rgba(241, 248, 233, 0.3);
+}
+
+.navbar-custom .nav li.active a:hover {
+    color: #F1F8E9;
+}
+
+@media(min-width:768px) {
+    .navbar-custom {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        padding: 0;
+        border-bottom: 1px solid rgba(156, 204, 101, 0.3);
+        background: #111111;
+    }
+}
+
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../media/intro.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media(min-width:768px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+}
+
+.content-section {
+    padding-top: 100px;
+}
+
+.what-to-do {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background: url(../media/whatToDoBackground.png) no-repeat bottom center scroll;
+    background-size: 100% 100%;
+}
+
+.soul-emission {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background: url(../media/soulBackground.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+@media(min-width:767px) {
+    .content-section {
+        padding-top: 250px;
+    }
+
+    .download-section {
+        padding: 100px 0;
+    }
+}
+
+.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.btn-default {
+    border: 1px solid #9ccc65;
+    color: #9ccc65;
+    background-color: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid #9ccc65;
+    outline: 0;
+    color: #000;
+    background-color: #9ccc65;
+}
+
+.btn-default:active {
+    color: #000;
+}
+
+ul.banner-social-buttons {
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    ul.banner-social-buttons li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    padding: 50px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: ##9ccc65;
+    background: #9ccc65;
+}
+
+::selection {
+    text-shadow: none;
+    background: ##9ccc65;
+    background: #9ccc65;
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: #9ccc65;
+}
