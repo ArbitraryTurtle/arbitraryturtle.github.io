@@ -21,18 +21,25 @@
     <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 
     <script type = "text/javascript">
+        var fixed = false;
 		function Fixes() {
 			if (window.pageYOffset > screen.height) {
 				document.getElementById('title').style.display = "block";
 			} else {
 				document.getElementById('title').style.display = "none";
 			}
+            if (!fixed) {
+                fixed = true;
+                quality = setInterval(HighRes, 2200);
+            }
 			setTimeout(Fixes, 60);
 		}
+        function HighRes() {
+            document.getElementById('gif').style.display = "none";
+            document.getElementById('quality').style.display = "block";
+        }
 		window.onload = Fixes;
 	</script>
-
-     <!--div id="bgndVideo" class="player mb_YTPlayer isMuted" data-property="{videoURL:&#39;YPJAUfahACI&#39;,containment:&#39;body&#39;,autoPlay:true, mute:true, startAt:0, opacity:1, addRaster:false, showControls:false, showYTLogo:false, quality:&#39;default&#39;, stopMovieOnBlur:false}" style="display: none; background-image: none;"></div-->
 
 </head>
 
@@ -74,7 +81,8 @@
             <div class = "container">
                 <div class = "row">
                     <div class = "col-md-8 col-md-offset-2">
-                        <img class =  "hvr-grow" src = "media/ArbitraryTurtle.png" width = "760" height ="320">
+                        <img id = "gif" class =  "hvr-grow" src = "media/ATgif.gif" width = "760" height ="320">
+                        <img id = "quality" class =  "hvr-grow" src = "media/ArbitraryTurtle.png" width = "760" height ="320">
                     </div>
                 </div>
             </div>
@@ -89,13 +97,40 @@
            	<div id = "yellow">
                 <div id = "justify">
                  	<h3>What is it?</h3>
-            		<p>Soul Emission is an 2D atmospheric sci-fi shooter on multiple platforms. </p>
+            		<p>Soul Emission is an 2D atmospheric sci-fi shooter on multiple platforms.</p>
             		<h3>Story</h3>
+                        <p>You are an astronaut in 2358 on a solitary mission to discover new planets. When orbiting planet E030U596 your ship comes into contact with a small, acidic object then burns through your ship's hull. It's spores burst open and spread a toxic gas throughout the entire ship, killing you. Luckily you were wearing your company's special suit, Soul Emission. The suit allows you to stay alive in a ghost like form until you reconnect with you body. Soul Emission is a new technology, so it's limited in the fact that you are uploaded in a special part of the ship, away from your body and you can only tap into the ghost power for a moment, elsewise leaving you mortal. Why bother finding your body? You will do in a few days if you don't. The acidic object carried bacteria that evolved at an astonishing rate and will attack anything other than themselves on sight.</p>
             		<h3>Gameplay</h3>
-            		<h3>Technical</h3>
+                        <p>
+                        <span id = "underline">Main Objective</span><br>
+                            The main focus of the gameplay is to move though different parts of the ship by finding the door's activator until you find your beloved body.
+                        <br><span id = "underline">Gun Mechanics</span><br>
+                            The gun is fully automatic and has different bullet types that completely balanced to fit your preferred play style. Each bullet type has a different look and sound. You can switch out your ammo type at stations that appear frequently.                   
+                        <br><span id = "underline">Length</span><br>
+                            The demo is around 20 minutes and the full game will be about 2 hours.
+                        </p>
+                    <h3>Enemies</h3>
+                        <p>
+                        <span id = "underline">Pointy Legs</span><br>
+                            This enemy has an average movement speed and attacks you by swinging down its long, sharp arms when in close proximity. 
+                        <br><span id = "underline">Four Eyes</span><br>
+                            Attaches itself to the ceiling, drops down when you get near it and injures you whenever you are in contact with it. 
+                        <br><span id = "underline">Explodetaur</span><br>
+                            With little value for it's own life it quickly charges at you and explodes when you enter the explosion radius.
+             		<h3>Technical</h3>
+                        <p>
+                        Created in Unity 5.
+                        <br>Supports any modern computer and keys will be rebind able.
+                        <br>High resolution textures for all game objects, example being the player/enemy sprites have a height of over 2500 pixels.
+                        </p>
             	</div>
                 <br>
-                <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Play Beta In-Browser</a>
+                <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Play Beta In-Browser</a>    
+                <br><br>
+                <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Download Beta - PC</a>
+                <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Download Beta - Android</a>
+                <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Download Beta - Mac</a>
+                <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Download Beta - Linux</a>
         	</div>
         </div>
     </section>
@@ -105,17 +140,29 @@
     <section id = "whatToDo" class = "content-section text-center">
     	<div class = "what-to-do">
         	<div class = "container">
-                    <img class = "hvr-wobble-vertical" src = "media/What To Do.png" width = "500" height ="160" Target = "_blank">
-                    <div id = "black">
-                    <div id = "justify">
-                    	<h3>What is it?</h3>
-	                    <p>What To Do is an Android app that is modeled after the physical notepad, it allows you to write down what's important with minimal effort and lets you move on with your day. It takes the information you write down and neatly presents it in a notification for you to see in any situation.</p>
-	                </div>
-	        			<a href = "https://play.google.com/store/apps/details?id = arbitraryturtle.whattodo" Target = "_blank">
-						<img class = "hvr-glow" alt = "Get it on Google Play" src = "media/play.png"/></a>
-   					
-   					</div>
+                <img class = "hvr-wobble-vertical" src = "media/What To Do.png" width = "500" height ="160" Target = "_blank">
+                <div id = "black">
+                <div id = "justify">
+                	<h3>What is it?</h3>
+                    <p>What To Do is an Android app that is modeled after the physical notepad, it allows you to write down what's important with minimal effort and lets you move on with your day. It takes the information you write down and neatly presents it in a notification for you to see in any situation.</p>
+                    <h3>Features</h3>
+                    <p>
+                    Clear All<br>
+                        <span id = "customList">• Removes all text</span><br>
+                    Stop/Show Notification<br>
+                        <span id = "customList">• Toggles whether to display the app's notification</span><br>
+                    Swap Text<br>
+                        <span id = "customList">• Enables you to switch the position of two items</span><br>
+                    Select Theme</span><br>
+                        <span id = "customList">• Allows you to change the color of the title bar. If you are on Android 5.0+ it will also change the notification icon's, status bar's, and recent apps bar's color.</span><br>
+                    Undo Clear</span><br>
+                        <span id = "customList">• After using the Clear All feature or using the singular clear function you have a chance to get back your data until you type again.</    span>
+                    </p>
                 </div>
+    			<a href = "https://play.google.com/store/apps/details?id=arbitraryturtle.whattodo" Target = "_blank">
+				<img class = "hvr-glow" alt = "Get it on Google Play" src = "media/play.png"/></a>
+				</div>
+            </div>
         </div>
     </section>
 	

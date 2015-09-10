@@ -23,6 +23,10 @@ html {
     height: 100%;
 }
 
+h3 {
+    font-size: 22px;
+}
+
 h1,
 h2,
 h3,
@@ -62,15 +66,35 @@ h6 {
     display: none;
 }
 
+#noBullets {
+    list-style-type: none;
+}
+
+#customList {
+    padding-left: 25px;
+    font-size: 14px;
+}
+
+#underline {
+    text-decoration: underline;
+}
+
+#gif {
+    display: block;
+}
+
+#quality {
+    display: none;
+}
 p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
 }
 
 @media(min-width:768px) {
     p {
         margin-bottom: 30px; 
-        font-size: 18px;
+        font-size: 17px;
         line-height: 1.6;
     }
 }
@@ -102,16 +126,16 @@ a:focus {
 
 .navbar-custom .navbar-brand .navbar-toggle {
     padding: 4px 6px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .navbar-custom .navbar-brand .navbar-toggle:focus,
 .navbar-custom .navbar-brand .navbar-toggle:active {
-    outline: 0;
+    outline: 0
 }
 
 .navbar-custom a {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .navbar-custom .nav li a {

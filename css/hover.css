@@ -28,8 +28,8 @@
     transition-property: transform;
   }
   .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-    -webkit-transform: scale(1.08);
-    transform: scale(1.08);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
   }
 
   /* Shrink */
