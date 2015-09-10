@@ -21,23 +21,14 @@
     <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 
     <script type = "text/javascript">
-        var fixed = false;
 		function Fixes() {
 			if (window.pageYOffset > screen.height) {
 				document.getElementById('title').style.display = "block";
 			} else {
 				document.getElementById('title').style.display = "none";
 			}
-            if (!fixed) {
-                fixed = true;
-                quality = setInterval(HighRes, 2200);
-            }
 			setTimeout(Fixes, 60);
 		}
-        function HighRes() {
-            document.getElementById('gif').style.display = "none";
-            document.getElementById('quality').style.display = "block";
-        }
 		window.onload = Fixes;
 	</script>
 
@@ -81,8 +72,7 @@
             <div class = "container">
                 <div class = "row">
                     <div class = "col-md-8 col-md-offset-2">
-                        <img id = "gif" class =  "hvr-grow" src = "media/ATgif.gif" width = "760" height ="320">
-                        <img id = "quality" class =  "hvr-grow" src = "media/ArbitraryTurtle.png" width = "760" height ="320">
+                        <img class =  "hvr-grow" src = "media/ArbitraryTurtle.png" width = "760" height ="320">
                     </div>
                 </div>
             </div>
