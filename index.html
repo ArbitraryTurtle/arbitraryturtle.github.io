@@ -27,9 +27,22 @@
 			} else {
 				document.getElementById('title').style.display = "none";
 			}
-			setTimeout(Fixes, 60);
+			setTimeout(Fixes, 200);
 		}
-		window.onload = Fixes;
+        var anim;
+        var interval = false;
+        var index = 0;
+        function Animation () {
+            anim = setInterval(DoAnimation, 185);
+        }
+        function DoAnimation () {
+            document.getElementById('anim').src = "media/Animation/" + index.toString() + ".png";
+            index++;
+            if (index == 17) {
+                clearInterval(anim);
+            }
+        }
+        window.onload = Fixes;
 	</script>
 
 </head>
@@ -72,7 +85,7 @@
             <div class = "container">
                 <div class = "row">
                     <div class = "col-md-8 col-md-offset-2">
-                        <img class =  "hvr-grow" src = "media/ArbitraryTurtle.png" width = "760" height ="320">
+                        <img class = "hvr-grow" src = "media/Animation/0.png" id = "anim" width = "760" height ="320">
                     </div>
                 </div>
             </div>
@@ -197,6 +210,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src = "js/grayscale.js"></script>
+    <script>Animation();</script>
 
 </body>
 
