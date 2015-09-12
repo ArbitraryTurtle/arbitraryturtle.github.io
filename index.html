@@ -33,12 +33,12 @@
         var interval = false;
         var index = 0;
         function Animation () {
-            anim = setInterval(DoAnimation, 185);
+            anim = setInterval(DoAnimation, 125);
         }
         function DoAnimation () {
             document.getElementById('anim').src = "media/Animation/" + index.toString() + ".png";
             index++;
-            if (index == 17) {
+            if (index == 19) {
                 clearInterval(anim);
             }
         }
