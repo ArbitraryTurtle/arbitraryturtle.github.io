@@ -23,14 +23,15 @@
     <script type = "text/javascript">
 		function Fixes() {
 			if (window.pageYOffset > screen.height) {
-				document.getElementById('title').style.display = "block";
+			    document.getElementById('title').style.display = "block";
+                document.getElementById('TitleHref').href = "#page-top";
 			} else {
 				document.getElementById('title').style.display = "none";
-			}
+                document.getElementById('TitleHref').href = "JavaScript:";   
+            }
 			setTimeout(Fixes, 200);
 		}
         var anim;
-        var interval = false;
         var index = 0;
         function Animation () {
             anim = setInterval(DoAnimation, 125);
@@ -49,12 +50,14 @@
 
 <body id = "page-top" data-spy = "scroll" data-target = ".navbar-fixed-top">
 
+    <div class = "desktopOnly">
     <!-- Navigation -->
     <nav class = "navbar navbar-custom navbar-fixed-top" role = "navigation">
         <div class = "container">
-                <a class = "navbar-brand page-scroll" href = "#page-top">
+                
+                <a id = "TitleHref" class = "navbar-brand page-scroll" href = "#page-top">
                 <div id = "title"> 
-                   Arbitrary <span id = "green2"> Turtle </span></div>
+                    Arbitrary <span id = "green2"> Turtle </span></div>
                 </a>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -64,13 +67,13 @@
                     <li class = "hidden">
                         <a href = "#page-top"></a>
                     </li>
-                    <li id = "first">
+                    <li>
                         <a class = "page-scroll" href = "#soulEmission">Soul Emission</a>
                     </li>
-                    <li id = "second">
+                    <li>
                         <a class = "page-scroll" href = "#whatToDo">What To Do</a> 
                     </li>
-                    <li id = "third">
+                    <li>
                         <a class = "page-scroll" href = "#contact">Contact</a>
                     </li>
                 </ul>
@@ -78,6 +81,7 @@
             <!-- /.navbar-collapse -->
         </div>
     </nav>
+    </div>
 
     <!-- Intro Header -->
     <header class = "intro">
@@ -94,7 +98,8 @@
 
     <!-- Soul Emission Section -->
     
-   <section id = "soulEmission" class = "content-section text-center"><div class = "soul-emission">
+   <section id = "soulEmission" class = "content-section text-center">
+        <div class = "soul-emission">
         <div class = "container">
             <img class = "hvr-wobble-horizontal" src = "media/SOULEMISSION.png" width = "500" height ="216">
            	<div id = "yellow">
@@ -132,9 +137,11 @@
                 <br><br>
                 <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Download Beta - PC</a>
                 <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Download Beta - Android</a>
+                <br>
                 <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Download Beta - Mac</a>
                 <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Download Beta - Linux</a>
         	</div>
+        </div>
         </div>
     </section>
 
@@ -159,13 +166,14 @@
                     Select Theme</span><br>
                         <span id = "customList">• Allows you to change the color of the title bar. If you are on Android 5.0+ it will also change the notification icon's, status bar's, and recent apps bar's color.</span><br>
                     Undo Clear</span><br>
-                        <span id = "customList">• After using the Clear All feature or using the singular clear function you have a chance to get back your data until you type again.</    span>
+                        <span id = "customList">• After using the Clear All feature or using the singular clear function you have a chance to get back your data until you type again.</span>
                     </p>
                 </div>
     			<a href = "https://play.google.com/store/apps/details?id=arbitraryturtle.whattodo" Target = "_blank">
 				<img class = "hvr-glow" alt = "Get it on Google Play" src = "media/play.png"/></a>
 				</div>
             </div>
+        </div>
         </div>
     </section>
 	
