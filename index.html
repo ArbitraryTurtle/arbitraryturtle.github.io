@@ -31,9 +31,17 @@
             }
 			setTimeout(Fixes, 200);
 		}
+
         var anim;
         var index = 0;
         function Animation () {
+            // Preload animation images.
+            image = new Image();
+            images = new Array();
+            for (var i=0; i<19; i++) {
+                images[i] = "media/Animation/" + i.toString() + ".png";
+                image.src = images[i];
+            }
             anim = setInterval(DoAnimation, 125);
         }
         function DoAnimation () {
