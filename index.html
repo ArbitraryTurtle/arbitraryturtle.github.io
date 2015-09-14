@@ -32,16 +32,18 @@
 			setTimeout(Fixes, 200);
 		}
 
+        function Preload() {
+            images = new Array();
+            for (var i=0; i<19; i++) {
+                images[i] = new Image();
+                images[i].src = "media/Animation/" + i.toString() + ".png";
+            }
+        }
+
         var anim;
         var index = 0;
         function Animation () {
             // Preload animation images.
-            image = new Image();
-            images = new Array();
-            for (var i=0; i<19; i++) {
-                images[i] = "media/Animation/" + i.toString() + ".png";
-                image.src = images[i];
-            }
             anim = setInterval(DoAnimation, 125);
         }
         function DoAnimation () {
@@ -52,6 +54,7 @@
             }
         }
         window.onload = Fixes;
+        window.onload = Preload;
 	</script>
 
 </head>
