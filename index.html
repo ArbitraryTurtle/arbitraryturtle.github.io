@@ -15,14 +15,14 @@
     <link href = "css/bootstrap.min.css" rel = "stylesheet">
     <!-- http://startbootstrap.com/template-overviews/grayscale/ -->
     <!-- Modified -->
-    <link href = "css/grayscale.css" rel = "stylesheet">
+    <link href = "css/style.css" rel = "stylesheet">
     <link href = "css/hover.css" rel = "stylesheet">
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 
     <script type = "text/javascript">
 		function Fixes() {
-			if (window.pageYOffset > screen.height) {
+			if (window.pageYOffset > 500) {
 			    document.getElementById('title').style.display = "block";
                 document.getElementById('TitleHref').href = "#page-top";
 			} else {
@@ -44,6 +44,7 @@
         var index = 0;
         function Animation () {
             // Preload animation images.
+            Fixes();
             anim = setInterval(DoAnimation, 145);
         }
         function DoAnimation () {
@@ -53,7 +54,6 @@
                 clearInterval(anim);
             }
         }
-        window.onload = Fixes;
         window.onload = Preload;
 	</script>
 
@@ -126,7 +126,7 @@
                         <br><span id = "underline">Gun Mechanics</span><br>
                             The gun is fully automatic and has different bullet types that completely balanced to fit your preferred play style. Each bullet type has a different look and sound. You can switch out your ammo type at stations that appear frequently.                   
                         <br><span id = "underline">Length</span><br>
-                            The demo is around 20 minutes and the full game will be about 2 hours.
+                            The demo is around 17 minutes and the full game will be approximately 2 hours.
                         </p>
                     <h3>Enemies</h3>
                         <p>
@@ -144,14 +144,7 @@
                         </p>
             	</div>
                 <br>
-                <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Play Beta In-Browser</a>    
-                <br>
-                <h3>Download the Beta</h3>
-                
-                <a href = "" class = "btn btn-default btn-lg" Target = "_blank">PC</a>
-                <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Android</a>
-                <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Mac</a>
-                <a href = "" class = "btn btn-default btn-lg" Target = "_blank">Linux</a>
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/p_Kqi5GL_rU" frameborder="0" allowfullscreen></iframe>
         	</div>
         </div>
         </div>
