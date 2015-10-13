@@ -254,6 +254,35 @@ a:focus {
     }
 }
 
+.play {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.play-default {
+    border: 1px solid #FFEB3B;
+    color: #FFEB3B;
+    background-color: transparent;
+}
+
+.play-default:hover,
+.play-default:focus {
+    border: 1px solid #FFEB3B;
+    outline: 0;
+    color: #000;
+    background-color: #FFEB3B;
+}
+
+.play-default:active {
+    color: #000;
+}
+
 .btn {
     border-radius: 0;
     text-transform: uppercase;
