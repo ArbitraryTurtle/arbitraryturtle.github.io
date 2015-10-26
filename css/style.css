@@ -242,7 +242,7 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../media/soulBackground.jpg) no-repeat bottom center scroll;
+    background: url(../media/soulBackground.png) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
