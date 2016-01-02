@@ -43,10 +43,31 @@
         var anim;
         var index = 0;
         function Animation () {
-            // Preload animation images.
             Fixes();
-            anim = setInterval(DoAnimation, 145);
+            // http://stackoverflow.com/questions/2400935/browser-detection-in-javascript 
+            navigator.whatBrowser = (function(){
+                var ua= navigator.userAgent, tem,
+                M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+                if(/trident/i.test(M[1])){
+                    tem =  /\brv[ :]+(\d+)/g.exec(ua) || [];
+                    return 'IE '+(tem[1] || '');
+                }
+                if(M[1] === 'Chrome'){
+                    tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+                    if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+                }
+                M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+                if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+                return M[0];
+            })();
+            //Firefox currently has a glitch with the changing images
+            if (navigator.whatBrowser != "Firefox") {
+                anim = setInterval(DoAnimation, 120);
+            } else {
+                document.getElementById('anim').src = "media/Animation/18.png";    
+            }
         }
+
         function DoAnimation () {
             document.getElementById('anim').src = "media/Animation/" + index.toString() + ".png";
             index++;
@@ -82,7 +103,7 @@
                         <a class = "page-scroll" href = "#soulEmission">Soul Emission</a>
                     </li>
                     <li>
-                        <a class = "page-scroll" href = "#whatToDo">What To Do</a> 
+                        <a class = "page-scroll" href = "#whatToDo">What to Do</a> 
                     </li>
                     <li>
                         <a class = "page-scroll" href = "#contact">Contact</a>
@@ -132,7 +153,7 @@
                         <br><span id = "underline">Length</span><br>
                             The demo is around 15 minutes and the full game will be approximately 2 hours.
                         </p>
-                        <img src="media/Hero.png" width = "400" height ="158" class = "hvr-wobble-horizontal">
+                        <img id = "largePic" src="media/Hero.png" width = "400" height ="158" class = "hvr-wobble-horizontal">
                     <h3>Enemies</h3>
                         <p>
                         <span id = "underline">Pointy Legs</span><br>
@@ -141,7 +162,7 @@
                             Attaches itself to the ceiling, drops down when you get near it and injures you whenever you are in contact with it. 
                         <br><span id = "underline">Explodetaur</span><br>
                             With little value for it's own life it quickly charges at you and explodes when you enter the explosion radius.</p>
-                        <img src="media/Enemies.png" width = "325" height ="158" class = "hvr-wobble-horizontal">
+                        <img id = "largePic" src="media/Enemies.png" width = "325" height ="158" class = "hvr-wobble-horizontal">
              		<h3>Technical</h3>
                         <p>
                         Created in Unity 5.
@@ -163,16 +184,16 @@
         </div>
     </section>
 
-    <!-- What To Do Section -->
+    <!-- What to Do Section -->
    
     <section id = "whatToDo" class = "content-section text-center">
     	<div class = "what-to-do">
         	<div class = "container">
-                <img id = "largePic" class = "hvr-wobble-vertical" src = "media/What To Do.png" width = "500" height ="160" Target = "_blank">
+                <img id = "largePic" class = "hvr-wobble-vertical" src = "media/What to Do.png" width = "500" height ="160" Target = "_blank">
                 <div id = "black">
                 <div id = "justify">
                 	<h3>What is it?</h3>
-                    <p>What To Do is an Android app that is modeled after the physical notepad, it allows you to write down what's important with minimal effort and lets you move on with your day. It takes the information you write down and neatly presents it in a notification for you to see in any situation.</p>
+                    <p>What to Do is an Android app that is modeled after the physical notepad, it allows you to write down what's important with minimal effort and lets you move on with your day. It takes the information you write down and neatly presents it in a notification for you to see in any situation.</p>
                     <h3>Features</h3>
                     <p>
                     Clear All<br>
